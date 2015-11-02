@@ -1,0 +1,26 @@
+{
+  "name": "update-eslint",
+  "description": "Update an existing eslint config file, or if one does not exist it will add one using your saved config defaults.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/update-eslint",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/update-eslint",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/update-eslint/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "updatefile.js"
+  ],
+  "main": "updatefile.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "dependencies": {
+    "extend-shallow": "^2.0.1"
+  }
+}
