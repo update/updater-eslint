@@ -12,15 +12,22 @@
   "files": [
     "updatefile.js"
   ],
-  "main": "updatefile.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
   "dependencies": {
     "extend-shallow": "^2.0.1"
+  },
+  "keywords": [
+    "eslint",
+    "update"
+  ],
+  "verb": {
+    "related": {
+      "list": []
+    }
   }
 }
