@@ -1,17 +1,19 @@
 {
-  "name": "update-eslint",
-  "description": "Update an existing eslint config file, or if one does not exist it will add one using your saved config defaults.",
+  "name": "updater-eslint",
+  "description": "Automatically update a `.eslintrc.json` file as part of a larger build workflow. This updater can be used as a component or plugin in other updaters.",
   "version": "0.1.0",
-  "homepage": "https://github.com/jonschlinkert/update-eslint",
+  "homepage": "https://github.com/update/updater-eslint",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "repository": "jonschlinkert/update-eslint",
+  "repository": "update/updater-eslint",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/update-eslint/issues"
+    "url": "https://github.com/jonschlinkert/updater-eslint/issues"
   },
   "license": "MIT",
   "files": [
-    "updatefile.js"
+    "index.js"
   ],
+  "main": "index.js",
+  "preferGlobal": true,
   "engines": {
     "node": ">=0.10.0"
   },
@@ -19,7 +21,13 @@
     "test": "mocha"
   },
   "dependencies": {
-    "extend-shallow": "^2.0.1"
+    "delete": "^0.3.0",
+    "generate-eslint": "^0.1.2",
+    "is-valid-app": "^0.1.0"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.9",
+    "mocha": "^2.5.3"
   },
   "keywords": [
     "eslint",
@@ -28,6 +36,24 @@
   "verb": {
     "related": {
       "list": []
-    }
+    },
+    "toc": false,
+    "layout": "updater",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "generate-eslint",
+      "gulp",
+      "update",
+      "verb",
+      "verb-readme-generator"
+    ]
   }
 }
