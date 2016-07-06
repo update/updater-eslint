@@ -71,6 +71,10 @@ You should now be able to run `updater-eslint` with the following command:
 $ gen eslint
 ```
 
+**What will this do?**
+
+This updater's `default` task will replace the `.eslintrc.json` file in the current working directory with either `~/templates/_eslintrc.json` ([defined by you](#customization) in user home), or if a template does not exist in user home the [default template](templates/_eslintrc.json) will be used.
+
 ### Running tasks
 
 Tasks on `updater-eslint` are by run passing the name of the task to run after the updater name, delimited by a comma.
@@ -142,7 +146,7 @@ Visit Update's [task documentation](https://github.com/update/update/blob/master
 
 **Overriding templates**
 
-You can override any of the templates by adding a template of the same name to the `templates` directory in user home. For example, to override the `_eslintrc.json` template, add a template at the following path `~/templates/_eslintrc.json`.
+You can override a template by adding a template of the same name to the `templates` directory in user home. For example, to override the `_eslintrc.json` template, add a template at the following path `~/templates/_eslintrc.json`.
 
 ## About
 
