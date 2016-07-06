@@ -1,6 +1,6 @@
 {
   "name": "updater-eslint",
-  "description": "Automatically update a `.eslintrc.json` file as part of a larger build workflow. This updater can be used as a component or plugin in other updaters.",
+  "description": "Update a `.eslintrc.json` file based on a template and preferences. This updater can be used from the command line when installed globally, or as a plugin in other updaters.",
   "version": "0.1.0",
   "homepage": "https://github.com/update/updater-eslint",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
@@ -10,7 +10,10 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE",
+    "README.md",
+    "templates"
   ],
   "main": "index.js",
   "preferGlobal": true,
@@ -27,18 +30,35 @@
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.9",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "update": "^0.6.2",
+    "verb-readme-generator": "^0.1.18"
   },
   "keywords": [
     "eslint",
-    "update"
+    "fix",
+    "lint",
+    "linter",
+    "maintain",
+    "plugin",
+    "plugins",
+    "up-to-date",
+    "update",
+    "update-plugin",
+    "update-updater",
+    "updater",
+    "updaterplugin"
   ],
   "verb": {
     "related": {
-      "list": []
+      "list": [
+        "assemble",
+        "update",
+        "verb"
+      ]
     },
-    "toc": false,
-    "layout": "updater",
+    "toc": true,
+    "layout": "common-minimal",
     "tasks": [
       "readme"
     ],
@@ -50,7 +70,6 @@
     },
     "reflinks": [
       "generate-eslint",
-      "gulp",
       "update",
       "verb",
       "verb-readme-generator"
