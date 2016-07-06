@@ -7,6 +7,11 @@ var isValid = require('is-valid-app');
 
 module.exports = function(app) {
   if (!isValid(app, 'update-eslint')) return;
+
+  /**
+   * Register a generator
+   */
+
   app.register('generate-eslint', require('generate-eslint'));
 
   /**
@@ -22,6 +27,20 @@ module.exports = function(app) {
   app.task('eslint', {silent: true}, ['eslint-del', 'eslint-new']);
 
   /**
+   * Adds a new `.eslintrc.json` file by running the `default` task from [generate-eslint][]{#eslintdefault}
+   *
+   * ```sh
+   * $ update eslint:new
+   * ```
+   * @name eslint:new
+   * @api public
+   */
+
+  app.task('eslint-new', {silent: true}, function(cb) {
+    app.generate('generate-eslint', cb);
+  });
+
+  /**
    * Delete the `eslintrc` and `jshint` files in the current working directory, or
    * specified `--cwd`.
    *
@@ -34,20 +53,6 @@ module.exports = function(app) {
 
   app.task('eslint-del', {silent: true}, function(cb) {
     del(['.jshintrc', '.eslintrc.json', '.eslintrc'], done(app, cb));
-  });
-
-  /**
-   * Adds a new `.eslintrc.json` file by running the `default` task from [generate-eslint][]{#eslintdefault}
-   *
-   * ```sh
-   * $ update eslint:new
-   * ```
-   * @name eslint:new
-   * @api public
-   */
-
-  app.task('eslint-new', {silent: true}, function(next) {
-    app.generate('generate-eslint', next);
   });
 
   /**
