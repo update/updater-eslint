@@ -107,7 +107,7 @@ If a task is not explicitly passed Update's CLI will run the `default` task.
 
 ### [eslint](index.js#L27)
 
-Update the `.eslintrc.json` file in the current working directory or specified `--cwd`.
+Update the `.eslintrc.json` file in the current working directory.
 
 **Example**
 
@@ -115,9 +115,9 @@ Update the `.eslintrc.json` file in the current working directory or specified `
 $ update eslint
 ```
 
-### [eslint:new](index.js#L39)
+### [eslint:new](index.js#L40)
 
-Adds a new `.eslintrc.json` file by running [generate-eslint](https://github.com/generate/generate-eslint).
+Adds a new `.eslintrc.json` file by running [generate-eslint](https://github.com/generate/generate-eslint). The template is [customizable](#customization).
 
 **Example**
 
@@ -127,7 +127,7 @@ $ update eslint:new
 
 ### [eslint:del](index.js#L54)
 
-Delete the `eslintrc` and `jshint` files in the current working directory, or specified `--cwd`.
+Delete the `eslintrc` and `jshint` files in the current working directory.
 
 **Example**
 

@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.register('generate-eslint', require('generate-eslint'));
 
   /**
-   * Update the `.eslintrc.json` file in the current working directory or specified `--cwd`.
+   * Update the `.eslintrc.json` file in the current working directory.
    *
    * ```sh
    * $ update eslint
@@ -27,7 +27,8 @@ module.exports = function(app) {
   app.task('eslint', {silent: true}, ['eslint-del', 'eslint-new']);
 
   /**
-   * Adds a new `.eslintrc.json` file by running [generate-eslint][].
+   * Adds a new `.eslintrc.json` file by running [generate-eslint][]. The template
+   * is [customizable](#customization).
    *
    * ```sh
    * $ update eslint:new
@@ -41,8 +42,7 @@ module.exports = function(app) {
   });
 
   /**
-   * Delete the `eslintrc` and `jshint` files in the current working directory, or
-   * specified `--cwd`.
+   * Delete the `eslintrc` and `jshint` files in the current working directory.
    *
    * ```sh
    * $ update eslint:del
