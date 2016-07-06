@@ -149,7 +149,7 @@ Visit Update's [task documentation](https://github.com/update/update/blob/master
 
 ## Plugin usage
 
-Use updater-eslint as a plugin in your own updater.
+Use `updater-eslint` as a [plugin](https://github.com/update/update/blob/master/docs/plugins.md) in your own[updater](https://github.com/update/update/blob/master/docs/updaters.md) .
 
 ### Install
 
@@ -161,7 +161,7 @@ $ npm install --save updater-eslint
 
 ### Register
 
-Inside your [updater](https://github.com/update/update/blob/master/docs/updaters.md) :
+Inside your own [updater](https://github.com/update/update/blob/master/docs/updaters.md) :
 
 ```js
 module.exports = function(app) {
@@ -181,7 +181,7 @@ module.exports = function(app) {
 };
 ```
 
-Learn more [about updaters](https://github.com/update/update/blob/master/docs/updaters.md) .
+Visit the [updater docs](https://github.com/update/update/blob/master/docs/updaters.md) to learn more about creating, installing, using and publishing updaters.
 
 ## Customization
 
