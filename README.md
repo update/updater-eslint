@@ -161,7 +161,7 @@ $ npm install --save updater-eslint
 
 ### Register
 
-Inside your updater:
+Inside your [updater](https://github.com/update/update/blob/master/docs/updaters.md) :
 
 ```js
 module.exports = function(app) {
@@ -180,6 +180,8 @@ module.exports = function(app) {
   });
 };
 ```
+
+Learn more [about updaters](https://github.com/update/update/blob/master/docs/updaters.md) .
 
 ## Customization
 
