@@ -10,7 +10,7 @@ Update a `.eslintrc.json` file based on a template and preferences. This updater
 - [What is "Update"?](#what-is-update)
 - [Gettings started](#gettings-started)
   * [Install](#install)
-  * [Running {%= name %}](#running-%-name-%)
+  * [Running updater-eslint](#running-updater-eslint)
   * [Running tasks](#running-tasks)
   * [Available tasks](#available-tasks)
 - [Customization](#customization)
