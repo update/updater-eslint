@@ -1,7 +1,7 @@
 {
   "name": "updater-eslint",
   "description": "Update a `.eslintrc.json` file based on a template and preferences. This updater can be used from the command line when installed globally, or as a plugin in other updaters.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/update/updater-eslint",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "update/updater-eslint",
