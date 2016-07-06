@@ -27,7 +27,7 @@ module.exports = function(app) {
   app.task('eslint', {silent: true}, ['eslint-del', 'eslint-new']);
 
   /**
-   * Adds a new `.eslintrc.json` file by running the `default` task from [generate-eslint][]{#eslintdefault}
+   * Adds a new `.eslintrc.json` file by running [generate-eslint][].
    *
    * ```sh
    * $ update eslint:new
