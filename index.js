@@ -28,7 +28,8 @@ module.exports = function(app) {
 
   /**
    * Adds a new `.eslintrc.json` file by running [generate-eslint][]. The template
-   * is [customizable](#customization).
+   * is [customizable](#customization). This task is also aliased as `eslint-new`
+   * to provide a semantic task name for calling this task programmatically.
    *
    * ```sh
    * $ update eslint:new
@@ -37,12 +38,15 @@ module.exports = function(app) {
    * @api public
    */
 
+  app.task('new', ['eslint-new']);
   app.task('eslint-new', {silent: true}, function(cb) {
     app.generate('generate-eslint', cb);
   });
 
   /**
-   * Delete the `eslintrc` and `jshint` files in the current working directory.
+   * Delete the `eslintrc` and `jshint` files in the current working directory. Also
+   * aliased as `eslint-del` to provide a semantic task name for calling this task
+   * programmatically.
    *
    * ```sh
    * $ update eslint:del
@@ -51,8 +55,9 @@ module.exports = function(app) {
    * @api public
    */
 
+  app.task('del', ['eslint-del']);
   app.task('eslint-del', {silent: true}, function(cb) {
-    del(['.jshintrc', '.eslintrc.json', '.eslintrc'], done(app, cb));
+    del(['.jshintrc', '.eslintrc.json', '.eslintrc'], {cwd: app.cwd}, done(app, cb));
   });
 
   /**
