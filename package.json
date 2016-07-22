@@ -12,8 +12,7 @@
   "files": [
     "index.js",
     "LICENSE",
-    "README.md",
-    "templates"
+    "README.md"
   ],
   "main": "index.js",
   "preferGlobal": true,
