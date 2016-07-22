@@ -6,13 +6,12 @@
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "update/updater-eslint",
   "bugs": {
-    "url": "https://github.com/jonschlinkert/updater-eslint/issues"
+    "url": "https://github.com/update/updater-eslint/issues"
   },
   "license": "MIT",
   "files": [
     "index.js",
-    "LICENSE",
-    "README.md"
+    "LICENSE"
   ],
   "main": "index.js",
   "preferGlobal": true,
@@ -23,15 +22,15 @@
     "test": "mocha"
   },
   "dependencies": {
-    "delete": "^0.3.0",
+    "delete": "^0.3.2",
     "generate-eslint": "^0.1.2",
-    "is-valid-app": "^0.1.0"
+    "is-valid-app": "^0.2.0"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.9",
     "mocha": "^2.5.3",
-    "update": "^0.6.2",
-    "verb-readme-generator": "^0.1.18"
+    "update": "^0.7.3",
+    "verb-generate-readme": "^0.1.28"
   },
   "keywords": [
     "eslint",
@@ -69,9 +68,7 @@
     },
     "reflinks": [
       "generate-eslint",
-      "update",
-      "verb",
-      "verb-readme-generator"
+      "update"
     ]
   }
 }
