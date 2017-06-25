@@ -2,8 +2,8 @@
 
 var path = require('path');
 var del = require('delete');
-var dir = path.resolve.bind(path, __dirname, 'templates');
 var isValid = require('is-valid-app');
+var dir = path.resolve.bind(path, __dirname, 'templates');
 
 module.exports = function(app) {
   if (!isValid(app, 'update-eslint')) return;
@@ -56,8 +56,13 @@ module.exports = function(app) {
    */
 
   app.task('del', ['eslint-del']);
-  app.task('eslint-del', {silent: true}, function(cb) {
-    del(['.jshintrc', '.eslintrc.json', '.eslintrc'], {cwd: app.cwd}, done(app, cb));
+  app.task('eslint-del', {silent: true}, function() {
+    return del(['.jshintrc', '.eslintrc.json', '.eslintrc'], {cwd: app.cwd})
+      .then(function(files) {
+        if (files.length && app.options.verbose) {
+          console.log('deleted', files.join(', '));
+        }
+      });
   });
 
   /**
@@ -72,13 +77,3 @@ module.exports = function(app) {
 
   app.task('default', {silent: true}, ['eslint']);
 };
-
-function done(app, cb) {
-  return function(err, files) {
-    if (err) return cb(err);
-    if (files.length && app.options.verbose) {
-      console.log('deleted', files.join(', '));
-    }
-    cb();
-  };
-}
