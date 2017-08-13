@@ -4,33 +4,36 @@
   "version": "0.1.1",
   "homepage": "https://github.com/update/updater-eslint",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Brian Woodward (https://twitter.com/doowb)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "Stefan Walther (http://qliksite.io)"
+  ],
   "repository": "update/updater-eslint",
   "bugs": {
     "url": "https://github.com/update/updater-eslint/issues"
   },
   "license": "MIT",
   "files": [
-    "index.js",
-    "LICENSE"
+    "index.js"
   ],
   "main": "index.js",
   "preferGlobal": true,
   "engines": {
-    "node": ">=5.0.0"
+    "node": ">=5"
   },
   "scripts": {
     "test": "mocha"
   },
   "dependencies": {
-    "delete": "^0.3.2",
-    "generate-eslint": "^0.1.2",
-    "is-valid-app": "^0.2.0"
+    "delete": "^1.1.0",
+    "generate-eslint": "^1.0.0",
+    "is-valid-app": "^0.3.0"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.9",
-    "mocha": "^2.5.3",
-    "update": "^0.7.3",
-    "verb-generate-readme": "^0.1.28"
+    "gulp-format-md": "^1.0.0",
+    "mocha": "^3.4.2",
+    "update": "^0.7.4"
   },
   "keywords": [
     "eslint",
@@ -38,16 +41,25 @@
     "lint",
     "linter",
     "maintain",
+    "maintainance",
     "plugin",
     "plugins",
     "up-to-date",
     "update",
     "update-plugin",
     "update-updater",
+    "updateplugin",
     "updater",
-    "updaterplugin"
+    "updaterplugin",
+    "upkeep"
   ],
   "verb": {
+    "toc": {
+      "render": true,
+      "method": "preWrite",
+      "collapsible": true,
+      "maxdepth": 4
+    },
     "related": {
       "list": [
         "assemble",
@@ -55,8 +67,7 @@
         "verb"
       ]
     },
-    "toc": true,
-    "layout": "common-minimal",
+    "layout": "updater",
     "tasks": [
       "readme"
     ],
